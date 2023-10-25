@@ -33,7 +33,7 @@ def get_filters():
             print("Invalid input. Please input a valid month.")
 
 
-    # get user input for day of week (all, monday, tuesday, ... sunday)
+    # get user input for day of week (all, monday, tuesday, ..., sunday)
     while True:
         day = input("Enter a day of the week (all, monday, tuesday, ..., sunday): ").lower()
         if day in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
@@ -58,7 +58,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-      # Load data file into a DataFrame
+    # Load data file into a DataFrame
     df = pd.read_csv(CITY_DATA[city])
 
     # Convert the 'Start Time' column to datetime
