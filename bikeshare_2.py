@@ -37,7 +37,8 @@ def get_filters():
         else:
             print("Invalid input. Please input a valid month.")
 
-    # get user input for day of week (all, monday, tuesday, ... sunday)
+
+    # get user input for day of week (all, monday, tuesday, ..., sunday)
 
     while True:
         day = input("Enter a day of the week (all, monday, tuesday, ..., sunday): ").lower()
@@ -65,7 +66,8 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
 
-      # Load data file into a DataFrame
+    # Load data file into a DataFrame
+
     df = pd.read_csv(CITY_DATA[city])
 
     # Convert the 'Start Time' column to datetime
@@ -98,7 +100,7 @@ def time_stats(df):
     print("The most common month is:", most_common_month)
 
 
-    # display the most common day of week
+    # display the most common day of the week
     most_common_day = df['Day of Week'].mode()[0]
     print("The most common day of the week is: ", most_common_day)
 
